@@ -5,6 +5,8 @@
 #include <windows.h>
 #include "Snake.h"
 
+#include <time.h>
+
 // Laver boksen til banen
 #define Height 20
 #define Width 40
@@ -15,7 +17,7 @@ int SnaketailLenght;
 
 int gameover, key, score;
 
-int x,y, fruitx, fruity; // koordinaterne til hovedet på slangen
+int x,y, fruitx, fruity; // koordinaterne til hovedet på slangen og frugten
 
 void setup();
 
@@ -32,11 +34,12 @@ void main() {
 		draw();
 		input();
 		logic();
-		Sleep(34);
+		Sleep(33);
 	}
 }
 
 void setup() {
+	srand(time(0)); // Laver denne for at start frugten, starter forskellige steder
 	gameover = 0;
 
 	// Koordinaterne til slangen
@@ -46,13 +49,13 @@ void setup() {
 	fruitx = rand() % Width;
 	fruity = rand() % Height;
 
-	while (fruitx == 0) {
+	while (fruitx == 0)
 		fruitx = rand() % Width;
-	}
 
-	while (fruity == 0) {
+
+	while (fruity == 0)
 		fruity = rand() % Height;
-	}
+
 
 	score = 0;
 
@@ -136,8 +139,8 @@ void logic() {
 	for (int i = 1; i < SnaketailLenght; i++) {
 		prevX2 = SnaketailX[i];
 		prevY2 = SnaketailY[i];
-		SnaketailX[i] = prevX2;
-		SnaketailY[i] = prevY2;
+		SnaketailX[i] = prevX;
+		SnaketailY[i] = prevY;
 		prevX = prevX2;
 		prevY = prevY2;
 	}
