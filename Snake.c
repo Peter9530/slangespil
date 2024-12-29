@@ -29,11 +29,12 @@ void logic();
 void main() {
 	setup();
 	while (!gameover) {
-	draw();
-	input();
-	logic();
-	Sleep(34);
-	}	}
+		draw();
+		input();
+		logic();
+		Sleep(34);
+	}
+}
 
 void setup() {
 	gameover = 0;
@@ -76,14 +77,17 @@ void draw() {
 			else {
 				int prTail = 0; // Her laver jeg slangen "nye krop" med o
 				for (int k = 0; k < SnaketailLenght; k++) {
-					if (SnaketailX[k] == j && SnaketailY[k] == i) {
+					if (SnaketailX[k] == j
+						&& SnaketailY[k] == i) {
 						printf("o");
 						prTail = 1;}
-					}
+				}
 				if (!prTail)
-			printf(" ");}
+					printf(" ");
 			}
-		printf("\n");}
+		}
+		printf("\n");
+	}
 for (int i = 0; i < Width + 2; i++) // Bunden af boksen som bliver lavet med -
 	printf("-");
 	printf("\n");
@@ -121,6 +125,57 @@ void input() {
 	}
 }
 
+// Denne funktion laver jeg logikken, der tjekker om slangen spiser, bevæger eller rammer sig selv
 void logic() {
+// Først skal jeg lave noget som opdaterer koordinaterne hver gang slangen bevæger sig
+	int prevX = SnaketailX[0];
+	int prevY = SnaketailY[0];
+	int prevX2, prevY2;
+	SnaketailX[0] = x;
+	SnaketailY[0] = y;
+	for (int i = 1; i < SnaketailLenght; i++) {
+		prevX2 = SnaketailX[i];
+		prevY2 = SnaketailY[i];
+		SnaketailX[i] = prevX2;
+		SnaketailY[i] = prevY2;
+		prevX = prevX2;
+		prevY = prevY2;
+	}
+	// Til at ændre retningen på slangen
+	switch (key) {
+		case 1:
+			x--;
+			break;
+		case 2:
+			x++;
+			break;
+		case 3:
+			y--;
+			break;
+		case 4:
+			y++;
+			break;
+		default:
+			break;
+	}
+	// Skal lave en funktion til hvis spiller er slut
+	if (x < 0 || x >= Width || y < 0 || y >= Height)
+		gameover = 1;
 
-}
+	// Denne funktion tjekker for sammenstød med halen
+	for (int i = 0; i < SnaketailLenght; i++) {
+		if (SnaketailX[i] == x && SnaketailY[i] == y)
+			gameover = 1;
+	}
+	// Skal bruge en funktion til at opdaterer scoren hvis slangen spiser frugt
+	if (x == fruitx && y == fruity) {
+		fruitx = rand() % Width;
+		fruity = rand() % Height;
+		while (fruitx == 0) // Laver nyt frugt
+			fruitx = rand() % Width;
+		while (fruity == 0)
+			fruity = rand() % Height;
+		score += 10;
+			SnaketailLenght++;
+	}
+	}
