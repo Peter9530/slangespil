@@ -9,8 +9,11 @@
 
 // Array of strings: Char arr[3][10], den første "kasse" betyder hvor mange strings og den anden "kasse" betyder længden for hver streng. Hvis det skal være en pointer, så sætter man bare "*" foran.
 // Det vil sådan ud char arr[2][10] = {Wallah,wallah,walh}
+// Hvis man skal tælle et arr[] = {0,1,2,3,4} Meget vigtigt at den første tælles som 0.
 
 // ++i starter fra 1, hvor i++ starter fra 0.
+
+// % Hvis man skal regne det i hovedet, er det vigtigt at finde "resten" for eksempel 15%4, hvor tæt kan du få 4 op uden at ramme over 15? Du kan få op til 12 (4*3), derved tager du "resten" op til 15 hvilket er 3. Svaret er 3.
 
 // %d for int (tildelt)
 // %c for char
@@ -76,3 +79,17 @@ struct PackedStruct { // Husk, man skal lægge de forskellige variabler sammen.
 //realloc():
 // “realloc” or “re-allocation” method in C is used to dynamically change the memory allocation of a previously allocated memory. In other words, if the memory previously allocated with the help of malloc or calloc is insufficient, realloc can be used to dynamically re-allocate memory.
 //  Re-allocation of memory maintains the already present value and new blocks will be initialized with the default garbage value.
+
+// == Checks if the values of two operands are equal or not. If yes, then the condition becomes true.
+// ++ læg sammen
+// -- træk fra
+// ! ikke
+// <= Checks if the value of left operand is less than or equal to the value of right operand. If yes, then the condition becomes true.
+// >= Checks if the value of left operand is greater than or equal to the value of right operand. If yes, then the condition becomes true.
+// && Called Logical AND operator. If both the operands are non-zero, then the condition becomes true.
+// || eller
+// += Add AND assignment operator. It adds the right operand to the left operand and assign the result to the left operand.
+// -= Subtract AND assignment operator. It subtracts the right operand from the left operand and assigns the result to the left operand.
+// sizeof() Returns the size of a variable. Eksempel sizeof(a), where a is integer, will return 4.
+// & Binary AND Operator copies a bit to the result if it exists in both operands.
+// ? : .Conditional Expression - Eksempel: If Condition is true ? then value X : otherwise value Y
