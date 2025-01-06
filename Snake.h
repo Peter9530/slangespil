@@ -97,4 +97,4 @@ struct PackedStruct { // Husk, man skal lægge de forskellige variabler sammen.
 // -= Subtract AND assignment operator. It subtracts the right operand from the left operand and assigns the result to the left operand.
 // sizeof() Returns the size of a variable. Eksempel sizeof(a), where a is integer, will return 4.
 // & Binary AND Operator copies a bit to the result if it exists in both operands.
-// ? : .Conditional Expression - Eksempel: If Condition is true ? then value X : otherwise value Y
+// ? : .condition ? expression1 : expression2; En betingelse, der evalueres til enten sand (ikke-nul) eller falsk (nul). Expression1: Værdien eller udtrykket, der returneres, hvis betingelsen er sand. Expression2: Værdien eller udtrykket, der returneres, hvis betingelsen er falsk.
