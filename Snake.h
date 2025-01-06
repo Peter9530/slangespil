@@ -93,7 +93,7 @@ struct PackedStruct { // Husk, man skal lægge de forskellige variabler sammen.
 // ! ikke
 // <= Checks if the value of left operand is less than or equal to the value of right operand. If yes, then the condition becomes true.
 // >= Checks if the value of left operand is greater than or equal to the value of right operand. If yes, then the condition becomes true.
-// && Called Logical AND operator. If both the operands are non-zero, then the condition becomes true.
+// && Den logiske operator for "og" (AND). Det betyder, at udtrykket evalueres til sandt (1), hvis begge operanders værdier er sande (ikke-nul). Hvis mindst én af dem er falsk (0), evalueres udtrykket til falsk (0).
 // || eller
 // += Add AND assignment operator. It adds the right operand to the left operand and assign the result to the left operand.
 // -= Subtract AND assignment operator. It subtracts the right operand from the left operand and assigns the result to the left operand.
