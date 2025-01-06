@@ -23,6 +23,9 @@
 // %lu for not signed int.
 
 // >>. Håber det ikke det her bliver et spørgsmål, her er hvordan man regner det : Example: Let’s take a=21; which is 10101 in Binary Form. Now, if a is right shifted by 1 i.e a = a >> 1 then a will become a=a/(2^1). Thus, a = a/(2^1) = 10 which can be written as 1010.
+// << The left-shift by 1 and right-shift by 1 are equivalent to the product of the first term and 2 to the power given element(1<<3 = 1*pow(2,3)) and division of the first term and second term raised to power 2 (1>>3 = 1/pow(2,3)) respectively. 
+// a << 1 = 42
+// a >> 1 = 10 
 
 struct PackedStruct { // Husk, man skal lægge de forskellige variabler sammen.
     char a; // 1 byte
