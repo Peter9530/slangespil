@@ -7,6 +7,11 @@
 // Fatter stadig ikke hvordan man bruger en .h rigtigt :'(
 #endif //SNAKE_H
 
+// En selektiv kontrolstruktur udvælger én kommando til udførelse blandt en mængde af muligheder (kunne være en IF ELSE statment)
+// En rekursiv funktion kalder sig selv. Rekursive funktioner er nyttige når et problem kan opdeles i delproblemer, hvoraf nogle har samme natur som problemet selv
+// En funktion i C er rekursiv hvis den i nogle programtilstande kalder sig selv direkte eller indirekte
+// Iterative statements er for det meste for loop, while loop eller Do-while loop. 
+
 // Array of strings: Char arr[3][10], den første "kasse" betyder hvor mange strings og den anden "kasse" betyder længden for hver streng. Hvis det skal være en pointer, så sætter man bare "*" foran.
 // Det vil sådan ud char arr[2][10] = {Wallah,wallah,walh}
 // Hvis man skal tælle et arr[] = {0,1,2,3,4} Meget vigtigt at den første tælles som 0.
