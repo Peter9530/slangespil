@@ -15,6 +15,8 @@
 
 // % Hvis man skal regne det i hovedet, er det vigtigt at finde "resten" for eksempel 15%4, hvor tæt kan du få 4 op uden at ramme over 15? Du kan få op til 12 (4*3), derved tager du "resten" op til 15 hvilket er 3. Svaret er 3.
 
+// Float fungerer på samme måde som en double: 2.00 eller 2.50
+
 // %d for int (tildelt)
 // %c for char
 // %lf for double, kan skrive det med stort hvis det skal være en lang double.
