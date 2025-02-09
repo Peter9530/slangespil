@@ -103,5 +103,22 @@ struct PackedStruct { // Husk, man skal lægge de forskellige variabler sammen.
 // += Add AND assignment operator. It adds the right operand to the left operand and assign the result to the left operand.
 // -= Subtract AND assignment operator. It subtracts the right operand from the left operand and assigns the result to the left operand.
 // sizeof() Returns the size of a variable. Eksempel sizeof(a), where a is integer, will return 4.
+
+
+//Altid et NULL efter et array 
+
+// X-> skal bruges hvis der er en pointer til en scuct.  
+
+// X. prøves hvis der ikke er, bliver brugt i printf.  
+
+
+
+
+    
+
+
+
+
+
 // & Binary AND Operator copies a bit to the result if it exists in both operands.
 // ? : .condition ? expression1 : expression2; En betingelse, der evalueres til enten sand (ikke-nul) eller falsk (nul). Expression1: Værdien eller udtrykket, der returneres, hvis betingelsen er sand. Expression2: Værdien eller udtrykket, der returneres, hvis betingelsen er falsk.
