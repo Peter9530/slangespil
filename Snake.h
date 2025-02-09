@@ -111,6 +111,7 @@ struct PackedStruct { // Husk, man skal lægge de forskellige variabler sammen.
 
 // X. prøves hvis der ikke er, bliver brugt i printf.  
 
+// Definer et char array, kaldet s - char s[] = {'A', 'B', 'C', '\0'};
 
 
 
