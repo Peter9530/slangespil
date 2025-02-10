@@ -115,7 +115,15 @@ struct PackedStruct { // Husk, man skal lægge de forskellige variabler sammen.
 
 
 
-    
+//Huskeregler for free()
+//Brug kun free() på hukommelse allokeret med malloc(), calloc() eller realloc().
+//Undgå "double free" (ikke kald free() flere gange på samme pointer, da det kan føre til udefineret opførsel).
+//Efter free(), sæt pointeren til NULL for at undgå dangling pointers
+// Eksempel: 
+   // free(ptr);
+   // ptr = NULL;
+// For strukturer som linked lists eller arrays af pointers, skal du frigøre alle elementer.
+
 
 
 
